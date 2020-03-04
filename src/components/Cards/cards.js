@@ -1,7 +1,7 @@
 import React from "react";
 import { Player } from "video-react";
 
-
+import "./cards.css"
 
 function Cards(props) {
   const { date, title, explanation, url } = props.data;
