@@ -1,22 +1,32 @@
 import React from "react";
-import { Player } from "video-react";
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle
+} from 'reactstrap';
 
-import "./cards.css"
+import styled from "styled-components";
+
+
+const CardSize = styled.div`
+  
+  height: 35vh;
+  width: 45%;
+`;
 
 function Cards(props) {
   const { date, title, explanation, url } = props.data;
 
   return (
-    <div className="card">
-      <h2>
-        <span className="date">{date}</span>
-        {title}
-      </h2>
-      <p className="explanation">{explanation}</p>
-      <a className="url">{url}</a>
-      <Player href = {url}/>
-        
-    </div>
+    <CardSize>
+      <Card>
+          <CardBody>
+            <CardTitle>{title}</CardTitle> 
+            <CardSubtitle>{date}</CardSubtitle>
+        <CardImg top-width = "80%" src = {url} alt = "nasa photo of the day"/>
+            <CardText>{explanation}</CardText>      
+          </CardBody>
+      </Card>
+    </CardSize>
   );
 }
 

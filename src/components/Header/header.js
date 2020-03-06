@@ -1,13 +1,20 @@
 import React from "react";
+import styled from "styled-components";
 
-function Header(props){
+const Headerbox = styled.header`
+    background: red;
+
+`;
+
+
+function Header(){
 
     return(
-        <div>
-            <div className = "logo"></div>
-            <h1>Hello World!</h1>
-            <img src = "###" alt = "logo"/>
-        </div>
+        <Headerbox>
+            
+            <h1>NASA Photos!</h1>
+            
+        </Headerbox>
     )
 }
 
